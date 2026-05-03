@@ -233,22 +233,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero-stamp .scroll{
   margin-top:18px;display:flex;align-items:center;gap:10px;
 }
-.hero-cta{
-  margin-top:18px;
-  display:inline-flex;align-items:center;gap:12px;
-  padding:14px 22px;
-  background:var(--ink);
-  color:var(--paper);
-  font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-  border-radius:100px;
-  transition:transform .3s ease, box-shadow .3s ease, background .3s;
-  align-self:flex-end;
-  box-shadow:0 14px 30px -12px rgba(26,19,14,.45);
-}
-.hero-cta:hover{transform:translateY(-3px);box-shadow:0 20px 40px -10px rgba(242,58,54,.45);background:linear-gradient(95deg,#1A130E 0%, #2a1a14 100%)}
-.hero-cta svg{transition:transform .3s}
-.hero-cta:hover svg{transform:translate(3px,-3px)}
-
 .hero-pour-qui{
   position:absolute;
   bottom:24px;left:50%;transform:translateX(-50%);
@@ -272,7 +256,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     margin:32px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
     max-width:calc(100% - 24px);white-space:normal;text-align:center;
   }
-  .hero-cta{align-self:flex-start}
 }
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
@@ -385,7 +368,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     margin:32px auto 0;
     order:3;
   }
-  .hero-cta{align-self:flex-start}
   .hero-aix{display:none}
 }
 
@@ -848,129 +830,6 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   .case-mega{margin-bottom:50px}
 }
 
-/* ───── CASE STUDY (sombre, ancien — désactivé via class) ───── */
-.case{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
-.case::before{
-  content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;
-  border-radius:50%;border:1px solid rgba(247,120,49,.2);
-}
-.case::after{
-  content:'';position:absolute;bottom:-150px;left:-50px;width:500px;height:500px;
-  border-radius:50%;border:1px solid rgba(242,58,54,.15);
-}
-.case .kicker{color:var(--peach)}
-.case .kicker::before{background:var(--peach)}
-.case .kicker .num{color:rgba(248,244,234,.6)}
-.case-brand{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
-.case-logo-wrap{
-  width:96px;height:96px;border-radius:50%;
-  background:#FFFFFF;
-  display:flex;align-items:center;justify-content:center;
-  padding:14px;
-  box-shadow:0 18px 40px -12px rgba(26,19,14,.18);
-  flex-shrink:0;
-  border:1px solid rgba(26,19,14,.05);
-}
-.case-logo{
-  width:100%;height:auto;display:block;
-}
-.case-title{
-  font-family:var(--display);
-  font-weight:300;
-  font-size:clamp(48px,8vw,140px);
-  line-height:.9;
-  letter-spacing:-.03em;
-  color:var(--paper);
-  font-variation-settings:"opsz" 144, "SOFT" 30;
-  margin:0;
-}
-@media(max-width:760px){
-  .case-logo-wrap{width:72px;height:72px;padding:10px}
-  .case-brand{gap:18px}
-}
-.case-title .ital{font-family:var(--italic);font-style:italic;font-weight:400;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.case-sub{
-  font-family:var(--italic);font-style:italic;
-  font-size:clamp(20px,2.4vw,30px);
-  color:rgba(248,244,234,.85);
-  margin-top:32px;
-  max-width:60ch;
-  line-height:1.35;
-}
-.case-stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-  margin-top:80px;
-  padding-top:40px;
-  border-top:1px solid rgba(248,244,234,.18);
-}
-.case-stat .num{
-  font-family:var(--display);
-  font-weight:300;
-  font-size:clamp(40px,5.5vw,80px);
-  line-height:1;
-  letter-spacing:-.02em;
-  color:var(--paper);
-  font-variation-settings:"opsz" 144, "SOFT" 30;
-}
-.case-stat .num .pct,.case-stat .num .plus{font-family:var(--italic);font-style:italic;font-weight:400;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.case-stat .lbl{
-  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
-  color:rgba(248,244,234,.7);
-  margin-top:14px;
-  max-width:22ch;
-  line-height:1.5;
-}
-@media(max-width:760px){
-  .case-stats{grid-template-columns:repeat(2,1fr)}
-}
-
-/* Press cards */
-.press-grid{
-  margin-top:80px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
-.press-card{
-  background:var(--paper);
-  color:var(--ink);
-  padding:32px 28px;
-  position:relative;
-  transition:transform .4s ease;
-  display:flex;flex-direction:column;justify-content:space-between;
-  min-height:280px;
-}
-.press-card:hover{transform:translateY(-6px)}
-.press-card .pc-meta{
-  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
-  display:flex;justify-content:space-between;
-  color:var(--ink-soft);
-  padding-bottom:18px;border-bottom:1px solid var(--line);
-}
-.press-card .pc-source{color:var(--coral);font-weight:500}
-.press-card .pc-title{
-  font-family:var(--display);
-  font-weight:300;
-  font-size:clamp(20px,1.8vw,26px);
-  line-height:1.15;
-  letter-spacing:-.015em;
-  margin-top:24px;
-  font-variation-settings:"opsz" 144, "SOFT" 70;
-}
-.press-card .pc-quote{
-  font-family:var(--italic);font-style:italic;
-  font-size:14px;color:var(--ink-soft);margin-top:16px;line-height:1.5;
-}
-.press-card .pc-arrow{
-  display:inline-flex;align-items:center;gap:8px;margin-top:24px;
-  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--coral);
-}
-.press-card .pc-arrow svg{transition:transform .3s}
-.press-card:hover .pc-arrow svg{transform:translateX(6px)}
-@media(max-width:900px){.press-grid{grid-template-columns:1fr}}
 
 /* ───── TÉMOIGNAGE ───── */
 .testimonial{
@@ -1177,21 +1036,6 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
 }
 .contact-info .val a{transition:opacity .3s}
 .contact-info .val a:hover{opacity:.7}
-.contact-cta{
-  margin-top:60px;
-  display:inline-flex;align-items:center;gap:14px;
-  padding:20px 32px;
-  background:var(--ink);
-  color:var(--paper);
-  font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
-  border-radius:100px;
-  transition:transform .3s, background .3s, box-shadow .3s;
-  align-self:flex-start;
-  box-shadow:0 18px 40px -12px rgba(26,19,14,.55);
-}
-.contact-cta:hover{transform:translateY(-3px);background:var(--paper);color:var(--ink);box-shadow:0 24px 50px -10px rgba(255,249,238,.4)}
-.contact-cta svg{transition:transform .3s}
-.contact-cta:hover svg{transform:translate(3px,-3px)}
 .contact-kicker{color:var(--cream) !important}
 .contact-kicker::before{background:rgba(255,249,238,.6) !important}
 .contact-kicker .num{color:rgba(255,249,238,.85) !important}
@@ -1798,211 +1642,6 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   .sc-finale-num{font-size:48px}
 }
 
-/* ───── TIMELINE PRESSE (intégré dans Case Study) ───── */
-.case-presswall{
-  margin-top:90px;padding-top:50px;
-  border-top:1px solid rgba(248,244,234,.18);
-  position:relative;
-}
-.case-presswall-lbl{
-  display:flex;align-items:center;gap:14px;
-  font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--peach);
-  margin-bottom:60px;
-}
-.case-presswall-lbl .dash{display:inline-block;width:36px;height:1px;background:var(--peach);}
-
-.timeline-press{
-  position:relative;
-  padding:140px 0 100px;
-  overflow-x:auto;overflow-y:visible;
-  scrollbar-width:thin;scrollbar-color:rgba(248,244,234,.3) transparent;
-}
-.timeline-press::-webkit-scrollbar{height:6px}
-.timeline-press::-webkit-scrollbar-thumb{background:rgba(248,244,234,.25);border-radius:3px}
-.timeline-track{
-  position:relative;
-  min-width:1900px;
-  height:520px;
-  padding:0 60px;
-}
-.timeline-axis{
-  position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
-  height:1px;
-  background:linear-gradient(90deg, var(--coral) 0%, var(--orange) 50%, var(--fuchsia) 100%);
-  opacity:.6;
-}
-.timeline-axis::before,.timeline-axis::after{
-  content:'';position:absolute;width:8px;height:8px;border-radius:50%;
-  top:50%;transform:translateY(-50%);
-}
-.timeline-axis::before{left:0;background:var(--coral)}
-.timeline-axis::after{right:0;background:var(--fuchsia)}
-
-.tl-node{
-  position:absolute;
-  display:flex;flex-direction:column;align-items:center;gap:14px;
-  text-align:center;
-  opacity:0;
-  animation:tlAppear 1s cubic-bezier(.2,.8,.3,1) forwards;
-}
-.tl-node::before{
-  content:'';position:absolute;left:50%;
-  width:1px;background:rgba(248,244,234,.25);
-}
-.tl-node.up{top:0}
-.tl-node.up::before{bottom:-30px;top:auto;height:0;animation:tlLine .6s ease forwards}
-.tl-node.down{bottom:0;flex-direction:column-reverse}
-.tl-node.down::before{top:-30px;bottom:auto;height:0;animation:tlLine .6s ease forwards}
-.tl-dot{
-  position:absolute;left:50%;
-  width:12px;height:12px;border-radius:50%;
-  background:var(--paper);
-  border:2px solid var(--coral);
-  transform:translateX(-50%);
-  z-index:3;
-  box-shadow:0 0 0 4px rgba(242,58,54,.15);
-}
-.tl-node.up .tl-dot{bottom:-6px}
-.tl-node.down .tl-dot{top:-6px}
-
-.tl-card{
-  background:var(--paper);
-  color:var(--ink);
-  padding:14px 14px 16px;
-  border:1px solid rgba(248,244,234,.2);
-  box-shadow:0 22px 50px -22px rgba(0,0,0,.6);
-  text-align:left;
-  text-decoration:none;color:inherit;
-  display:block;
-  transition:transform .35s ease, box-shadow .35s ease;
-  cursor:pointer;
-  position:relative;
-}
-.tl-card:hover{transform:translateY(-4px) rotate(0deg) !important;box-shadow:0 30px 60px -20px rgba(0,0,0,.8);z-index:4}
-.tl-card img{width:100%;height:auto;display:block;margin-bottom:10px;background:var(--cream-deep)}
-.tl-card .tl-src{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);font-weight:500;display:block;margin-bottom:4px}
-.tl-card .tl-title{font-family:var(--display);font-weight:300;font-size:14px;line-height:1.2;letter-spacing:-.005em;font-variation-settings:"opsz" 144, "SOFT" 60;}
-.tl-card .tl-date{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;display:block}
-
-/* Sizes */
-.tl-card.s{width:170px}
-.tl-card.m{width:210px}
-.tl-card.l{width:260px}
-.tl-card.xl{width:300px}
-
-/* Special — origin event */
-.tl-origin{
-  background:var(--grad);color:var(--paper);
-  border:none;
-  padding:18px 20px;
-  width:280px;
-  text-align:center;
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-}
-.tl-origin .tl-origin-mark{
-  font-family:var(--italic);font-style:italic;
-  font-size:36px;line-height:1;color:var(--paper);
-  margin-bottom:4px;
-}
-.tl-origin .tl-origin-lbl{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;}
-.tl-origin .tl-origin-title{font-family:var(--display);font-style:italic;font-size:22px;font-weight:400;line-height:1.1;letter-spacing:-.01em;}
-.tl-origin .tl-origin-date{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin-top:4px}
-
-.tl-arrow{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  font-family:var(--italic);font-style:italic;
-  font-size:48px;color:var(--peach);
-  opacity:0;animation:fadeIn 1s ease 4s forwards;
-  pointer-events:none;
-}
-
-@keyframes tlAppear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes tlLine{from{height:0}to{height:30px}}
-@keyframes fadeIn{to{opacity:.5}}
-
-@media(max-width:900px){
-  .timeline-track{min-width:1400px}
-}
-.scraps{
-  position:relative;
-  max-width:1280px;margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:24px;
-  align-items:start;
-}
-.scrap{
-  background:var(--paper);
-  padding:22px 22px 18px;
-  border:1px solid var(--line);
-  box-shadow:0 18px 40px -20px rgba(26,19,14,.25);
-  position:relative;
-  transition:transform .35s ease, box-shadow .35s ease;
-  cursor:pointer;
-  text-decoration:none;color:inherit;
-  display:block;
-}
-.scrap:hover{transform:translateY(-6px) rotate(0deg) !important; box-shadow:0 30px 60px -20px rgba(26,19,14,.35); z-index:5}
-.scrap::before{
-  content:'';position:absolute;top:-12px;left:50%;transform:translateX(-50%);
-  width:60px;height:18px;
-  background:rgba(247,120,49,.5);
-  clip-path:polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
-  opacity:.7;
-}
-/* Asymmetric placement */
-.scrap-1{grid-column:1 / span 4;transform:rotate(-2.2deg);margin-top:0}
-.scrap-2{grid-column:5 / span 5;transform:rotate(1.4deg);margin-top:40px}
-.scrap-3{grid-column:10 / span 3;transform:rotate(-1deg);margin-top:8px}
-.scrap-4{grid-column:2 / span 4;transform:rotate(1.8deg);margin-top:24px}
-.scrap-5{grid-column:6 / span 4;transform:rotate(-1.6deg);margin-top:60px}
-.scrap-6{grid-column:10 / span 3;transform:rotate(2deg);margin-top:24px}
-.scrap-source{
-  display:flex;justify-content:space-between;align-items:center;
-  font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
-  padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:14px;
-}
-.scrap-source .src{color:var(--coral);font-weight:500}
-.scrap-source .date{color:var(--ink-soft)}
-.scrap-title{
-  font-family:var(--display);
-  font-weight:300;
-  font-size:clamp(16px,1.4vw,21px);
-  line-height:1.2;letter-spacing:-.01em;
-  color:var(--ink);
-  font-variation-settings:"opsz" 144, "SOFT" 60;
-  margin-bottom:10px;
-}
-.scrap-quote{
-  font-family:var(--italic);font-style:italic;
-  font-size:13px;line-height:1.45;color:var(--ink-soft);
-}
-.scrap-tag{
-  display:inline-block;margin-top:12px;
-  padding:3px 8px;
-  background:rgba(247,120,49,.12);
-  font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--coral);
-}
-@media(max-width:900px){
-  .scraps{display:flex;flex-direction:column;gap:18px;max-width:480px}
-  .scrap,.scrap-1,.scrap-2,.scrap-3,.scrap-4,.scrap-5,.scrap-6{
-    grid-column:auto;transform:none !important;margin-top:0;
-  }
-}
-
-/* ───── COLOPHON ───── */
-.colophon{
-  max-width:1480px;margin:24px auto 0;
-  display:flex;justify-content:center;flex-wrap:wrap;gap:8px 16px;
-  padding-top:24px;
-  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(248,244,234,.5);
-  text-align:center;
-}
-.colophon em{font-family:var(--italic);font-style:italic;text-transform:none;font-size:14px;letter-spacing:0;color:rgba(248,244,234,.85);margin:0 2px}
-.colophon .col-sep{opacity:.4}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease, transform .9s ease}
@@ -2355,11 +1994,6 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
     <div class="scrolly-head">
       <span class="scrolly-eyebrow">— De l'événement à la une &middot; Acte III</span>
       <h2 class="scrolly-title">Chronologie d'une <span class="ital avalanche-word"><span class="fl">a</span><span class="fl">v</span><span class="fl">a</span><span class="fl">l</span><span class="fl">a</span><span class="fl">n</span><span class="fl">c</span><span class="fl">h</span><span class="fl">e</span><span class="fl">&nbsp;</span><span class="fl">p</span><span class="fl">r</span><span class="fl">e</span><span class="fl">s</span><span class="fl">s</span><span class="fl">e</span><span class="fl fl-dot">.</span></span></h2>
-      <div class="scrolly-progress"><span class="scrolly-progress-bar"></span></div>
-      <div class="scrolly-cursor">
-        <span class="scrolly-month" data-month="MAR">MARS 2026</span>
-        <span class="scrolly-hint">Faites défiler ↓</span>
-      </div>
     </div>
 
     <div class="scrolly-track-wrap">
@@ -2382,15 +2016,15 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
         </div>
 
         <a class="sc-node" href="https://www.lejdd.fr/economie/immobilier-la-migration-silencieuse-vers-les-residences-secondaires-169179" target="_blank" rel="noopener" data-side="down" data-date="20 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374803803.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Journal du Dimanche</span><h4 class="sc-title">Immobilier : la migration silencieuse vers les résidences secondaires</h4><span class="sc-date">20.03 &middot; Christophe Bordet</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374803803.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Journal du Dimanche</span><h4 class="sc-title">Immobilier : la migration silencieuse vers les résidences secondaires</h4><span class="sc-date">20.03 &middot; Christophe Bordet</span></div></div>
         </a>
 
         <a class="sc-node" href="https://presseagence.fr/paris-benoit-galy-la-residence-secondaire-est-devenue-une-etape-strategique-dans-une-trajectoire-de-vie/" target="_blank" rel="noopener" data-side="up" data-date="21 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374810889.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « La résidence secondaire est devenue une étape stratégique »</h4><span class="sc-date">21.03</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374810889.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « La résidence secondaire est devenue une étape stratégique »</h4><span class="sc-date">21.03</span></div></div>
         </a>
 
         <a class="sc-node" href="http://immobilier.lefigaro.fr/article/residences-secondaires-ces-villes-qui-echappent-encore-au-matraquage-fiscal-20260321" target="_blank" rel="noopener" data-side="down" data-date="21 MARS">
-          <div class="sc-card sc-l"><img src="assets/press/50000000374810567.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Figaro · Immobilier</span><h4 class="sc-title">Résidences secondaires : ces villes qui échappent au matraquage fiscal</h4><span class="sc-date">21.03 &middot; Guillaume Errard</span></div></div>
+          <div class="sc-card sc-l"><img src="assets/press/50000000374810567.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Figaro · Immobilier</span><h4 class="sc-title">Résidences secondaires : ces villes qui échappent au matraquage fiscal</h4><span class="sc-date">21.03 &middot; Guillaume Errard</span></div></div>
         </a>
 
         <a class="sc-node sc-broadcast" href="https://lb-eu.green-acres.com/agent_data/press-coverages/60000000260098712.mp3" target="_blank" rel="noopener" data-side="up" data-date="21 MARS">
@@ -2398,7 +2032,7 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
         </a>
 
         <a class="sc-node" href="http://www.leparisien.fr/immobilier/immobilier-ou-acheter-une-residence-secondaire-a-moins-de-200-000-euros-en-france-21-03-2026-I3BYFN3STZDXVKWVOKKWBA3UBE.php" target="_blank" rel="noopener" data-side="down" data-date="21 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374808460.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Parisien</span><h4 class="sc-title">Où acheter une résidence secondaire à moins de 200 000 €</h4><span class="sc-date">21.03 &middot; Anne-Laure Abraham</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374808460.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Parisien</span><h4 class="sc-title">Où acheter une résidence secondaire à moins de 200 000 €</h4><span class="sc-date">21.03 &middot; Anne-Laure Abraham</span></div></div>
         </a>
 
         <a class="sc-node sc-broadcast" href="https://lb-eu.green-acres.com/agent_data/press-coverages/60000000260096161.mp3" target="_blank" rel="noopener" data-side="up" data-date="21 MARS">
@@ -2406,55 +2040,55 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
         </a>
 
         <a class="sc-node" href="https://www.lyon-entreprises.com/actualites/article/immobilier-de-villegiature-les-alpes-confirment-leur-attractivite-en-auvergne-rhone-alpes" target="_blank" rel="noopener" data-side="down" data-date="22 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374812660.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Lyon-Entreprises</span><h4 class="sc-title">Les Alpes confirment leur attractivité en Auvergne-Rhône-Alpes</h4><span class="sc-date">22.03</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374812660.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Lyon-Entreprises</span><h4 class="sc-title">Les Alpes confirment leur attractivité en Auvergne-Rhône-Alpes</h4><span class="sc-date">22.03</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="up" data-date="22 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071136896.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Parisien</span><h4 class="sc-title">Les bons plans pour une résidence secondaire</h4><span class="sc-date">22.03 &middot; Print</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071136896.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Parisien</span><h4 class="sc-title">Les bons plans pour une résidence secondaire</h4><span class="sc-date">22.03 &middot; Print</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="down" data-date="22 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071136892.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Aujourd'hui en France</span><h4 class="sc-title">Où trouver un bien à moins de 200 000 € ?</h4><span class="sc-date">22.03 &middot; Anne-Laure Abraham</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071136892.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Aujourd'hui en France</span><h4 class="sc-title">Où trouver un bien à moins de 200 000 € ?</h4><span class="sc-date">22.03 &middot; Anne-Laure Abraham</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.lesechos.fr/patrimoine/immobilier/immobilier-ou-denicher-une-residence-secondaire-adaptee-a-son-budget-en-france-2222610" target="_blank" rel="noopener" data-side="up" data-date="24 MARS">
-          <div class="sc-card sc-l"><img src="assets/press/50000000374825335.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Les Échos</span><h4 class="sc-title">Où dénicher une résidence secondaire adaptée à son budget</h4><span class="sc-date">24.03 &middot; Anne-Sophie Vion</span></div></div>
+          <div class="sc-card sc-l"><img src="assets/press/50000000374825335.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Les Échos</span><h4 class="sc-title">Où dénicher une résidence secondaire adaptée à son budget</h4><span class="sc-date">24.03 &middot; Anne-Sophie Vion</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.immomatin.com/portails/sites-professionnels/les-agents-immobiliers-face-a-la-nouvelle-temporalite-de-l-immobilier-plaisir-portail-green-acres.html" target="_blank" rel="noopener" data-side="down" data-date="25 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374840653.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Immomatin</span><h4 class="sc-title">Les agents face à la nouvelle temporalité de l'immobilier plaisir</h4><span class="sc-date">25.03 &middot; Christian Capitaine</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374840653.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Immomatin</span><h4 class="sc-title">Les agents face à la nouvelle temporalité de l'immobilier plaisir</h4><span class="sc-date">25.03 &middot; Christian Capitaine</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.bfmtv.com/economie/replay-emissions/les-experts-de-l-immo/video-les-experts-de-l-immo-l-interdiction-des-meubles-touristiques-27-03_VN-202603270477.html" target="_blank" rel="noopener" data-side="up" data-date="27 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/bfm-experts-27-03.webp" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">BFM Business TV</span><h4 class="sc-title">Les Experts de l'Immo</h4><span class="sc-date">27.03 &middot; Marie Cœurderoy</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/bfm-experts-27-03.webp" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">BFM Business TV</span><h4 class="sc-title">Les Experts de l'Immo</h4><span class="sc-date">27.03 &middot; Marie Cœurderoy</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="down" data-date="27 MARS">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071177938.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Les Échos (Supplément)</span><h4 class="sc-title">Ces résidences secondaires à portée de budget</h4><span class="sc-date">27.03 &middot; Anne-Sophie Vion</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071177938.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Les Échos (Supplément)</span><h4 class="sc-title">Ces résidences secondaires à portée de budget</h4><span class="sc-date">27.03 &middot; Anne-Sophie Vion</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.bfmtv.com/immobilier/pres-de-la-moitie-des-logements-en-corse-un-tiers-en-savoie-les-maisons-de-vacances-sont-ultra-concentrees-a-la-mer-et-a-la-montagne-et-la-fiscalite-ne-rebute-pas-les-acquereurs_AN-202603280240.html" target="_blank" rel="noopener" data-side="up" data-date="28 MARS">
-          <div class="sc-card sc-l"><img src="assets/press/50000000374864388.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">BFM TV</span><h4 class="sc-title">La moitié des logements en Corse, un tiers en Savoie</h4><span class="sc-date">28.03 &middot; Emma Rodot</span></div></div>
+          <div class="sc-card sc-l"><img src="assets/press/50000000374864388.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">BFM TV</span><h4 class="sc-title">La moitié des logements en Corse, un tiers en Savoie</h4><span class="sc-date">28.03 &middot; Emma Rodot</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="down" data-date="1ᵉʳ AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071213210.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Nouvel Obs</span><h4 class="sc-title">Autour de Marseille — où acheter sa résidence secondaire ?</h4><span class="sc-date">01.04 &middot; A. Rousseau, A. Artinian</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071213210.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Nouvel Obs</span><h4 class="sc-title">Autour de Marseille — où acheter sa résidence secondaire ?</h4><span class="sc-date">01.04 &middot; A. Rousseau, A. Artinian</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.immobil-ia.fr/portails/partir-des-usages-plutot-que-du-code-postal-dans-sa-recherche-immobiliere-benoit-galy-green-acres/" target="_blank" rel="noopener" data-side="up" data-date="2 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374907801.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Immobil-IA</span><h4 class="sc-title">Partir des usages plutôt que du code postal — B. Galy</h4><span class="sc-date">02.04 &middot; Cassandre Tarvic</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374907801.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Immobil-IA</span><h4 class="sc-title">Partir des usages plutôt que du code postal — B. Galy</h4><span class="sc-date">02.04 &middot; Cassandre Tarvic</span></div></div>
         </a>
 
         <a class="sc-node" href="http://immobilier.lefigaro.fr/article/je-vais-rendre-50-millions-d-euros-aux-proprietaires-eric-ciotti-allege-la-taxe-fonciere-et-la-taxe-d-habitation-a-nice-20260402" target="_blank" rel="noopener" data-side="down" data-date="2 AVRIL">
-          <div class="sc-card sc-l"><img src="assets/press/50000000374907810.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Figaro · Immobilier</span><h4 class="sc-title">« Je vais rendre 50 M€ aux propriétaires » — Ciotti baisse la taxe à Nice</h4><span class="sc-date">02.04 &middot; Anne Rovan</span></div></div>
+          <div class="sc-card sc-l"><img src="assets/press/50000000374907810.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Figaro · Immobilier</span><h4 class="sc-title">« Je vais rendre 50 M€ aux propriétaires » — Ciotti baisse la taxe à Nice</h4><span class="sc-date">02.04 &middot; Anne Rovan</span></div></div>
         </a>
 
         <a class="sc-node" href="http://www.lanouvellerepublique.fr/deux-sevres/commune/sauze-vaussais/dans-cette-commune-des-deux-sevres-s-offrir-une-residence-secondaire-est-un-reve-encore-accessible-1775571354" target="_blank" rel="noopener" data-side="up" data-date="7 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374939451.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">La Nouvelle République</span><h4 class="sc-title">Dans cette commune des Deux-Sèvres, s'offrir une résidence secondaire</h4><span class="sc-date">07.04 &middot; Remi Simonet</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374939451.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">La Nouvelle République</span><h4 class="sc-title">Dans cette commune des Deux-Sèvres, s'offrir une résidence secondaire</h4><span class="sc-date">07.04 &middot; Remi Simonet</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.bfmtv.com/economie/replay-emissions/les-experts-de-l-immo/video-les-experts-de-l-immo-residences-secondaires-et-guerre-au-moyen-orient-08-04_VN-202604080474.html" target="_blank" rel="noopener" data-side="down" data-date="8 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/bfm-experts-08-04.webp" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">BFM Business TV</span><h4 class="sc-title">Les Experts de l'Immo</h4><span class="sc-date">08.04 &middot; Marie Cœurderoy</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/bfm-experts-08-04.webp" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">BFM Business TV</span><h4 class="sc-title">Les Experts de l'Immo</h4><span class="sc-date">08.04 &middot; Marie Cœurderoy</span></div></div>
         </a>
 
         <a class="sc-node sc-broadcast" href="https://lb-eu.green-acres.com/agent_data/press-coverages/60000000260117687.mp4" target="_blank" rel="noopener" data-side="up" data-date="8 AVRIL">
@@ -2462,59 +2096,59 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
         </a>
 
         <a class="sc-node" href="https://presseagence.fr/paris-benoit-galy-la-residence-secondaire-est-devenue-une-residence-principale-differee/" target="_blank" rel="noopener" data-side="down" data-date="10 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374959586.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « La résidence secondaire est devenue une résidence principale différée »</h4><span class="sc-date">10.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374959586.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « La résidence secondaire est devenue une résidence principale différée »</h4><span class="sc-date">10.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://nicepresse.com/immobilier-autour-de-nice-le-reve-de-residence-secondaire-se-paie-au-prix-fort-et-en-metres-carres-perdus/" target="_blank" rel="noopener" data-side="up" data-date="13 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374976274.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Nice Presse</span><h4 class="sc-title">Autour de Nice, le rêve de résidence secondaire se paie au prix fort</h4><span class="sc-date">13.04 &middot; Gwendal Chabas</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374976274.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Nice Presse</span><h4 class="sc-title">Autour de Nice, le rêve de résidence secondaire se paie au prix fort</h4><span class="sc-date">13.04 &middot; Gwendal Chabas</span></div></div>
         </a>
 
         <a class="sc-node" href="https://presseagence.fr/paris-benoit-galy-les-marseillais-ne-quittent-pas-le-sud-ils-lelargissent/" target="_blank" rel="noopener" data-side="down" data-date="14 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000374981634.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « Les Marseillais ne quittent pas le Sud, ils l'élargissent »</h4><span class="sc-date">14.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000374981634.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « Les Marseillais ne quittent pas le Sud, ils l'élargissent »</h4><span class="sc-date">14.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://mesinfos.fr/provence-alpes-cote-d-azur/les-marseillais-en-quete-d-espace-prennent-le-chemin-du-sud-ouest-244486.html" target="_blank" rel="noopener" data-side="up" data-date="21 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000375037499.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Mesinfos.fr</span><h4 class="sc-title">Les Marseillais en quête d'espace prennent le chemin du Sud-Ouest</h4><span class="sc-date">21.04 &middot; Frédéric Cheutin</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000375037499.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Mesinfos.fr</span><h4 class="sc-title">Les Marseillais en quête d'espace prennent le chemin du Sud-Ouest</h4><span class="sc-date">21.04 &middot; Frédéric Cheutin</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="down" data-date="22 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071369109.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Mieux Vivre Votre Argent</span><h4 class="sc-title">Résidences secondaires : où acheter pour limiter les contraintes</h4><span class="sc-date">22.04 &middot; Silvia Simao</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071369109.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Mieux Vivre Votre Argent</span><h4 class="sc-title">Résidences secondaires : où acheter pour limiter les contraintes</h4><span class="sc-date">22.04 &middot; Silvia Simao</span></div></div>
         </a>
 
         <a class="sc-node" href="http://www.ledauphine.com/economie/2026/04/25/residences-secondaires-plutot-la-mer-la-montagne-ou-la-campagne" target="_blank" rel="noopener" data-side="up" data-date="25 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000375075357.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Dauphiné Libéré</span><h4 class="sc-title">Notre enquête. Résidences secondaires : la mer, la montagne ou la campagne ?</h4><span class="sc-date">25.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000375075357.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Dauphiné Libéré</span><h4 class="sc-title">Notre enquête. Résidences secondaires : la mer, la montagne ou la campagne ?</h4><span class="sc-date">25.04</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="down" data-date="26 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071402606.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Dauphiné Libéré</span><h4 class="sc-title">« 20 ans que je viens et ils m'appellent le Parisien »</h4><span class="sc-date">26.04 &middot; Antoine Chandellier</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071402606.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Le Dauphiné Libéré</span><h4 class="sc-title">« 20 ans que je viens et ils m'appellent le Parisien »</h4><span class="sc-date">26.04 &middot; Antoine Chandellier</span></div></div>
         </a>
 
         <a class="sc-node" href="#" target="_blank" rel="noopener" data-side="up" data-date="27 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/10000000071406363.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Var-Matin</span><h4 class="sc-title">Le Var, destination de villégiature par excellence</h4><span class="sc-date">27.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/10000000071406363.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Var-Matin</span><h4 class="sc-title">Le Var, destination de villégiature par excellence</h4><span class="sc-date">27.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.mysweetimmo.com/2026/04/28/immobilier-plaisir-la-residence-secondaire-nest-plus-ce-que-vous-croyez/" target="_blank" rel="noopener" data-side="down" data-date="28 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000375093552.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">MySweetimmo</span><h4 class="sc-title">Immobilier plaisir : la résidence secondaire n'est plus ce que vous croyez</h4><span class="sc-date">28.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000375093552.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">MySweetimmo</span><h4 class="sc-title">Immobilier plaisir : la résidence secondaire n'est plus ce que vous croyez</h4><span class="sc-date">28.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://investir.lesechos.fr/budget/vie-pratique/residences-secondaires-voici-ou-acheter-pour-limiter-les-contraintes-2228890" target="_blank" rel="noopener" data-side="up" data-date="28 AVRIL">
-          <div class="sc-card sc-l"><img src="assets/press/50000000375093549.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Les Échos · Investir</span><h4 class="sc-title">Résidences secondaires : voici où acheter pour limiter les contraintes</h4><span class="sc-date">28.04</span></div></div>
+          <div class="sc-card sc-l"><img src="assets/press/50000000375093549.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Les Échos · Investir</span><h4 class="sc-title">Résidences secondaires : voici où acheter pour limiter les contraintes</h4><span class="sc-date">28.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.mysweetimmo.com/2026/04/28/immobilier-ce-que-letude-green-acres-vous-dit-sur-vos-clients-de-demain/" target="_blank" rel="noopener" data-side="down" data-date="28 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000375098225.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">MySweetimmo</span><h4 class="sc-title">Ce que l'étude Green-Acres vous dit sur vos clients de demain</h4><span class="sc-date">28.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000375098225.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">MySweetimmo</span><h4 class="sc-title">Ce que l'étude Green-Acres vous dit sur vos clients de demain</h4><span class="sc-date">28.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://presseagence.fr/paris-benoit-galy-le-projet-de-vie-lemporte-sur-ladresse-iconique/" target="_blank" rel="noopener" data-side="up" data-date="30 AVRIL">
-          <div class="sc-card sc-m"><img src="assets/press/50000000375112700.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « Le projet de vie l'emporte sur l'adresse iconique »</h4><span class="sc-date">30.04</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000375112700.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « Le projet de vie l'emporte sur l'adresse iconique »</h4><span class="sc-date">30.04</span></div></div>
         </a>
 
         <a class="sc-node" href="https://www.challenges.fr/immobilier/picardie-lorraine-ces-territoires-qui-connaissent-une-ruee-vers-les-residences-secondaires_643085" target="_blank" rel="noopener" data-side="down" data-date="30 AVRIL">
-          <div class="sc-card sc-xl"><img src="assets/press/50000000375109176.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src sc-src-major">Challenges</span><h4 class="sc-title">Picardie, Lorraine… Ces territoires qui connaissent une ruée vers les résidences secondaires</h4><span class="sc-date">30.04 &middot; Eugénie Barba</span></div></div>
+          <div class="sc-card sc-xl"><img src="assets/press/50000000375109176.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src sc-src-major">Challenges</span><h4 class="sc-title">Picardie, Lorraine… Ces territoires qui connaissent une ruée vers les résidences secondaires</h4><span class="sc-date">30.04 &middot; Eugénie Barba</span></div></div>
         </a>
 
         <a class="sc-node" href="https://presseagence.fr/paris-benoit-galy-la-vue-mer-nest-plus-un-bonus-cest-lactif-principal/" target="_blank" rel="noopener" data-side="up" data-date="1ᵉʳ MAI">
-          <div class="sc-card sc-m"><img src="assets/press/50000000375120103.jpg" alt="" loading="lazy" onerror="this.style.display='none'" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « La vue mer n'est plus un bonus, c'est l'actif principal »</h4><span class="sc-date">01.05</span></div></div>
+          <div class="sc-card sc-m"><img src="assets/press/50000000375120103.jpg" alt="" loading="lazy" /><div class="sc-card-body"><span class="sc-src">Presse Agence</span><h4 class="sc-title">B. Galy : « La vue mer n'est plus un bonus, c'est l'actif principal »</h4><span class="sc-date">01.05</span></div></div>
         </a>
 
         <!-- SCORE FINAL -->
@@ -2626,7 +2260,6 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
   ctx.scale(dpr, dpr);
 
   // Phase config (in ms, cumulative) — animation raccourcie
-  const T_BINARY_END    = 0;      // skip
   const T_WORDS_END     = 3500;   // 0 → 3.5s : mots qui orbitent (-0.7s)
   const T_QUOTES_END    = 12500;  // 3.5 → 12.5s : 3 citations × 3s (-1.5s)
   const T_SLOGAN_END    = 16200;  // 12.5 → 16.2s : ROYAL "Faisons résonner vos data"
@@ -2637,7 +2270,6 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
   const rowH = 22;
   const rows = Math.ceil(size / rowH);
   const words = ['IMMOBILIER', 'DATA', 'PRESSE', 'VISIBILITÉ', 'JOURNALISTE', 'PORTAIL', 'ACHAT'];
-  const sloganWords = ['FAISONS', 'RÉSONNER', 'VOS', 'DATA'];
   // Vraies prises de parole chiffrées de Séverine Amate dans la presse
   const quotes = [
     { text: '70% des futurs acquéreurs',         line2: 'pensent concrétiser leur projet',  line3: 'dans les 6 prochains mois.', src: 'SeLoger · 2020' },
@@ -2854,18 +2486,12 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
     ctx.shadowBlur = 0;
   }
 
-  function drawFadeOut(t, progress) {
-    drawSlogan(t, 1);
-  }
-
   function frame(now) {
     const elapsed = now - start;
     ctx.clearRect(0, 0, size, size);
 
-    if (elapsed < T_BINARY_END) {
-      drawBinaryRain(elapsed);
-    } else if (elapsed < T_WORDS_END) {
-      const p = (elapsed - T_BINARY_END) / (T_WORDS_END - T_BINARY_END);
+    if (elapsed < T_WORDS_END) {
+      const p = (elapsed - 0) / (T_WORDS_END - 0);
       drawWordsTransition(elapsed, p);
     } else if (elapsed < T_QUOTES_END) {
       drawQuotes(elapsed, elapsed);
@@ -2874,7 +2500,7 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
       drawSlogan(elapsed, p);
     } else if (elapsed < T_FADE_END) {
       const p = (elapsed - T_SLOGAN_END) / (T_FADE_END - T_SLOGAN_END);
-      drawFadeOut(elapsed, p);
+      drawSlogan(elapsed, p);
       if (!portrait.classList.contains('revealed')) {
         portrait.classList.add('revealed');
         // Slogan tag slides down from the orb to its anchor below
@@ -3045,18 +2671,12 @@ if (orb && !reducedMotion && window.innerWidth > 900) {
 }
 
 // Magnetic CTA buttons
-document.querySelectorAll('.hero-cta, .contact-cta').forEach(btn => {
-  if (reducedMotion) return;
-  btn.addEventListener('mousemove', (e) => {
-    const r = btn.getBoundingClientRect();
-    const x = (e.clientX - r.left - r.width / 2) * .25;
-    const y = (e.clientY - r.top - r.height / 2) * .25;
-    btn.style.transform = `translate(${x}px, ${y - 3}px)`;
-  });
-  btn.addEventListener('mouseleave', () => {
-    btn.style.transform = '';
-  });
-});
+
+
+// Cache les images cassées (remplace l'ancien onerror= inline)
+document.addEventListener('error', e => {
+  if (e.target.matches('img')) e.target.style.display = 'none';
+}, true);
 
 // Année dynamique pour le hero ("Édition YYYY") + footer copyright
 (() => {
