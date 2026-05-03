@@ -2085,7 +2085,7 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
       Vingt ans à <em>orchestrer la voix</em> des marques de l'immobilier — de la donnée brute jusqu'à la une.
     </p>
     <div class="hero-stamp">
-      <div class="big">Édition <em>2026</em></div>
+      <div class="big">Édition <em id="hero-year">2026</em></div>
     </div>
   </div>
 
@@ -2604,7 +2604,7 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Amate Réseaunance · SAS — Aix-en-Provence</span>
+    <span>© <span data-year>2026</span> Amate Réseaunance · SAS — Aix-en-Provence</span>
   </div>
 </footer>
 
@@ -3057,6 +3057,14 @@ document.querySelectorAll('.hero-cta, .contact-cta').forEach(btn => {
     btn.style.transform = '';
   });
 });
+
+// Année dynamique pour le hero ("Édition YYYY") + footer copyright
+(() => {
+  const y = new Date().getFullYear();
+  const hero = document.getElementById('hero-year');
+  if (hero) hero.textContent = y;
+  document.querySelectorAll('[data-year]').forEach(el => el.textContent = y);
+})();
 
 // Highlight nav link de la section visible (centre du viewport)
 (() => {
