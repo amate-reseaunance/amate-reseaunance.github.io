@@ -1,0 +1,37 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="Logo"
+   data-name="Logo"
+   width="285"
+   height="68"
+   viewBox="0 0 285 68"
+   version="1.1"><defs
+     id="defs6"><style
+       id="style4">
+            .text{
+                font-size:35px;
+                font-family:Raleway-Bold, Raleway;
+                font-weight:700;
+            }
+            .a{
+                fill:#1d1d1b;
+            }
+            .gras{
+                font-family:Raleway-ExtraLight, Raleway;
+                font-weight:200;
+            }
+            
+
+        </style></defs><text
+     class="text a"
+     id="text10"
+     x="39.836113"
+     y="59.351246"
+     style="font-weight:700;font-size:35px;font-family:Raleway-Bold, Raleway;fill:#1d1d1b">immo<tspan
+   class="gras a"
+   id="tspan8"
+   style="font-weight:200;font-family:Raleway-ExtraLight, Raleway;fill:#1d1d1b">matin</tspan></text><path
+     class="a"
+     d="M38.5,53.026H7.231V6.628H66.885V20.246h6.628V0H0V59.655H38.5Z"
+     id="path12" /></svg>

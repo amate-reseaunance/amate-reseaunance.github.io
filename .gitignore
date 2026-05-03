@@ -1,0 +1,31 @@
+# Claude Code internals
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts (none — site est 100% statique)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local
+.env
+.env.local
+
+# PDFs des Actes (28 MB, non référencés par le site — liens pointent vers green-acres.com)
+assets/acte1.pdf
+assets/acte2.pdf
+assets/acte3.pdf
