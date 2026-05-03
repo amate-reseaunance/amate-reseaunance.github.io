@@ -739,7 +739,7 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
 /* Animation éventail : chaque acte apparaît à son propre trigger scroll */
 .acte.in-view{opacity:1}
 .acte.in-view:nth-child(1){transform:translateY(0) rotate(-2.5deg) translateX(-8px)}
-.acte.in-view:nth-child(2){transform:translateY(0) rotate(0deg)}
+.acte.in-view:nth-child(2){transform:translateY(-10px) rotate(0deg)}
 .acte.in-view:nth-child(3){transform:translateY(0) rotate(2.5deg) translateX(8px)}
 
 .acte-img{
@@ -3192,6 +3192,7 @@ document.querySelectorAll('.hero-cta, .contact-cta').forEach(btn => {
     ['lyon entreprises',    'assets/logos/lyon-entreprises.png'],
     ['presse agence',       'assets/logos/presse-agence.svg'],
     ['mieux vivre',         'assets/logos/mieux-vivre.jpg'],
+    ['immobil',             'assets/logos/immobil-ia.png'],
   ];
   document.querySelectorAll('.sc-node:not(.sc-origin)').forEach(node => {
     const src = node.querySelector('.sc-src');
