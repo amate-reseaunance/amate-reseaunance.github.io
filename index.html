@@ -143,7 +143,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);width:22px}
 @media(max-width:760px){
   .nav{padding:14px 20px}
-  .nav-logo{font-size:10px}
+  .nav-logo{font-family:var(--display);font-style:italic;font-weight:400;font-size:16px;letter-spacing:-.005em;text-transform:none}
+  .nav-logo .mark{width:8px;height:8px}
   .nav-toggle{display:flex}
   .nav-links{
     position:fixed;top:0;right:0;bottom:0;left:0;
@@ -936,7 +937,9 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   .case-client{font-size:38px}
   .case-logo-wrap{width:96px;height:96px;padding:13px}
   .case-brand{gap:18px}
-  .actes{grid-template-columns:1fr;gap:50px}
+  .actes{grid-template-columns:1fr;gap:32px;margin:36px auto 0}
+  .acte{gap:10px}
+  .acte-meta{padding:0 4px}
   .case-mega{margin-bottom:50px}
   /* Mobile : pas d'inclinaison des observatoires (ils sont en colonne, ça n'a pas de sens) */
   .acte.in-view:nth-child(1),
