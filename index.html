@@ -486,8 +486,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 @media(max-width:760px){
   /* Marquee plus lisible mobile : label compact, scroll plus lent, items plus serrés */
   .marquee{padding:16px 0}
-  .marquee-label{width:90px;padding-left:16px;padding-right:12px;font-size:9px}
-  .marquee-track{padding-left:90px;gap:36px;animation-duration:50s}
+  .marquee-label{width:80px;padding-left:14px;padding-right:10px;font-size:9px;background:linear-gradient(90deg, var(--paper) 0%, var(--paper) 60%, rgba(255,249,238,0) 100%)}
+  .marquee-track{padding-left:80px;gap:36px;animation-duration:50s}
   .marquee-item{font-size:18px;gap:36px}
 }
 @media (prefers-reduced-motion: reduce){
@@ -606,6 +606,7 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   .kpi-badges{padding-top:18px;gap:8px}
   .badge{font-size:9.5px}
   .kicker{font-size:10px;letter-spacing:.18em;margin-bottom:20px}
+  .section-title{font-size:clamp(36px,9.5vw,52px);line-height:1}
 }
 
 /* ───── PARCOURS ───── */
