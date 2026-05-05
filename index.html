@@ -658,10 +658,14 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   line-height:1.5;
 }
 @media(max-width:760px){
-  .timeline::before{left:0}
-  .timeline-item{grid-template-columns:1fr;gap:8px;padding:28px 0 28px 24px}
-  .timeline-year::after{left:-29px;right:auto}
+  .timeline::before{left:8px}
+  .timeline-item{grid-template-columns:1fr;gap:6px;padding:24px 0 24px 30px}
+  .timeline-year{font-size:11px;padding-top:0;color:var(--coral);letter-spacing:.18em;text-transform:uppercase}
+  .timeline-year::after{left:-29px;right:auto;top:8px;width:11px;height:11px;border-color:var(--coral)}
   .timeline-content{padding-left:0}
+  .timeline-role{font-size:22px;line-height:1.1;margin-bottom:6px}
+  .timeline-org{font-size:9.5px;letter-spacing:.16em;margin-bottom:10px}
+  .timeline-desc{font-size:14px;line-height:1.5}
 }
 
 /* ───── EXPERTISE (fond sombre) ───── */
@@ -730,7 +734,10 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
 }
 @media(max-width:760px){
   .expertise-grid{grid-template-columns:1fr}
-  .expertise-card{padding:36px 28px;min-height:auto}
+  .expertise-card{padding:32px 24px;min-height:auto}
+  .exp-num{font-size:38px}
+  .exp-title{margin-top:36px;font-size:24px}
+  .exp-desc{font-size:13px;margin-top:14px}
 }
 
 /* ───── CASE STUDY (clair, refondé) ───── */
