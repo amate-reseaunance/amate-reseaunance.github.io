@@ -2249,8 +2249,16 @@ span.ital,em{padding-right:.10em;padding-left:.03em;letter-spacing:.008em}
   const portrait = document.querySelector('.hero-portrait');
   const orb = document.querySelector('.hero-orb');
   if (!canvas || !portrait) return;
+  // On respecte prefers-reduced-motion mais on garde un fade-in de la photo (sans canvas animé)
+  // Sinon sur macOS Safari (où "Reduce Motion" est souvent activé) la photo apparaît brutalement
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduced) { portrait.classList.add('revealed'); orb && orb.classList.add('tag-revealed'); return; }
+  if (reduced) {
+    setTimeout(() => {
+      portrait.classList.add('revealed');
+      orb && orb.classList.add('tag-revealed');
+    }, 600);
+    return;
+  }
 
   const ctx = canvas.getContext('2d');
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
