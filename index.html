@@ -1160,10 +1160,13 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
 .contact-kicker .num{color:rgba(255,249,238,.85) !important}
 @media(max-width:760px){
   /* Section contact remontée + grid en colonne (titre puis infos) */
-  .contact{padding:50px 24px 60px}
-  .contact-grid{grid-template-columns:1fr;gap:30px;align-items:start}
-  .contact-title{grid-column:1;font-size:clamp(48px,12vw,72px)}
-  .contact-side{grid-column:1}
+  .contact{padding:50px 20px 60px}
+  .contact-grid{grid-template-columns:1fr;gap:24px;align-items:start}
+  .contact-title{grid-column:1;font-size:clamp(48px,14vw,72px);line-height:.92}
+  .contact-side{grid-column:1;gap:18px}
+  .contact-info{padding-top:14px}
+  .contact-info .lbl{font-size:9.5px;letter-spacing:.16em;margin-bottom:4px}
+  .contact-info .val{font-size:18px}
 }
 
 /* ───── FOOTER ───── */
