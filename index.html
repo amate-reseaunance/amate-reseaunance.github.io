@@ -1212,10 +1212,13 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
 }
 @media(max-width:760px){
   .footer{padding:40px 20px 30px}
-  .footer-grid{grid-template-columns:1fr;gap:24px;padding-bottom:24px}
-  .footer-brand{grid-column:1/-1;font-size:32px}
-  .footer-col{grid-column:1/-1}
-  .footer-bottom{font-size:10px;line-height:1.5}
+  .footer-grid{grid-template-columns:repeat(2,1fr);gap:20px 24px;padding-bottom:24px}
+  .footer-brand{grid-column:1/-1;font-size:28px;margin-bottom:6px}
+  .footer-col{grid-column:span 1;gap:8px}
+  .footer-col:last-child{grid-column:1/-1}
+  .footer-col .h{font-size:9.5px;letter-spacing:.16em;color:var(--peach);opacity:.85}
+  .footer-col span,.footer-col a{font-size:11px}
+  .footer-bottom{font-size:9.5px;line-height:1.6;gap:8px;flex-direction:column;align-items:flex-start}
 }
 
 /* ───── SCROLL PROGRESS ───── */
