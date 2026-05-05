@@ -596,8 +596,16 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   flex-shrink:0;
 }
 @media(max-width:900px){
-  .manifesto-text{grid-column:1/-1}
+  .manifesto-grid{margin-top:36px;gap:0}
+  .manifesto-text{grid-column:1/-1;font-size:clamp(18px,5vw,22px);line-height:1.45}
+  .manifesto-text .drop{font-size:4em;padding:4px 10px 0 0}
   .manifesto-side{grid-column:1/-1;border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:24px;margin-top:24px}
+  .kpi{padding:14px 0;gap:12px}
+  .kpi-num{font-size:clamp(32px,9vw,48px)}
+  .kpi-label{font-size:9.5px;letter-spacing:.14em}
+  .kpi-badges{padding-top:18px;gap:8px}
+  .badge{font-size:9.5px}
+  .kicker{font-size:10px;letter-spacing:.18em;margin-bottom:20px}
 }
 
 /* ───── PARCOURS ───── */
