@@ -843,6 +843,10 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   .case-brand{gap:18px}
   .actes{grid-template-columns:1fr;gap:50px}
   .case-mega{margin-bottom:50px}
+  /* Mobile : pas d'inclinaison des observatoires (ils sont en colonne, rotation n'a pas de sens) */
+  .acte.in-view:nth-child(1),
+  .acte.in-view:nth-child(2),
+  .acte.in-view:nth-child(3){transform:translateY(0) rotate(0) translateX(0)}
 }
 
 
@@ -957,8 +961,13 @@ section{position:relative;z-index:2;padding:120px 40px;scroll-margin-top:80px;}
   margin-top:8px;
 }
 @media(max-width:760px){
-  .testimonial-quote{grid-column:1/-1}
-  .testimonial-author{grid-column:1/-1}
+  /* Mobile : auteur (photo + nom + titre) en haut, citation en dessous (au lieu de chevauchement) */
+  .testimonial-grid{grid-template-columns:1fr;gap:24px}
+  .testimonial-author{grid-column:1;grid-row:1;justify-self:start;display:flex;align-items:center;gap:14px}
+  .author-avatar{width:64px;height:64px;font-size:24px}
+  .author-info .name{font-size:16px}
+  .author-info .title{font-size:10px;letter-spacing:.16em;margin-top:4px}
+  .testimonial-quote{grid-column:1;grid-row:2;font-size:22px;line-height:1.25}
 }
 
 /* ───── MEDIA LOGOS ───── */
